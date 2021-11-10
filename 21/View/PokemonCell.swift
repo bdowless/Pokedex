@@ -10,7 +10,7 @@ import Kingfisher
 
 class PokemonCell: UICollectionViewCell {
     
-    var pokemon: Pokemon! {
+    var pokemon: Pokemon? {
         didSet {
             guard let pokemon = pokemon else { return }
             let imUrl = pokemon.imageUrl
