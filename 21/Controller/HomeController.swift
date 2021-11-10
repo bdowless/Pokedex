@@ -10,7 +10,7 @@ import UIKit
 let reuseidentifier = "Controller"
 
 class HomeController: UICollectionViewController {
-    var pokemons = [PokemonObject]() {
+    var pokemons = [Pokemon]() {
         didSet { collectionView.reloadData() }
     }
     
@@ -27,9 +27,8 @@ class HomeController: UICollectionViewController {
     // API
 
     func fetchData() {
-        AuthService.shared.fetchData { (data) in
+        Service.shared.fetchData { (data) in
             self.pokemons = data
-            print("DEBUG: Data has returned \(data)")
         }
     }
     
