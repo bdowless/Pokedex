@@ -10,7 +10,7 @@ import UIKit
 let reuseidentifier = "Controller"
 
 class HomeController: UICollectionViewController {
-    var pokemons = [PokemonObject]() {
+    var pokemons = [Pokemon]() {
         didSet { collectionView.reloadData() }
     }
     
