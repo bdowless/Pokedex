@@ -14,7 +14,7 @@ struct Pokemon: Decodable {
         let description: String
         let height: Int
         let id: Int
-        let imageUrl: String!
+        let imageUrl: String
         let name: String
         let type: String
         let weight: Int
