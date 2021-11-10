@@ -49,13 +49,13 @@
 import UIKit
 import Foundation
 
-struct AuthService {
+struct Service {
 
-static let shared = AuthService()
+static let shared = Service()
     
     func fetchData(completion: @escaping ([Pokemon])-> Void) {
         
-        let url = URL(string: "https://pokedex-bb36f.firebaseio.com/pokemon.json")!
+        guard let url = URL(string: "https://pokedex-bb36f.firebaseio.com/pokemon.json") else { return }
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data?.removeString() else { return }
